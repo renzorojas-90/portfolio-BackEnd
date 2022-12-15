@@ -1,11 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.portfolioRR.BackProyect.Controller;
 
+import com.portfolioRR.BackProyect.model.Educacion;
+import com.portfolioRR.BackProyect.model.Experiencia;
+import com.portfolioRR.BackProyect.model.Idioma;
 import com.portfolioRR.BackProyect.model.Persona;
+import com.portfolioRR.BackProyect.model.Proyecto;
+import com.portfolioRR.BackProyect.model.Redes;
+import com.portfolioRR.BackProyect.model.Tecnologia;
 import com.portfolioRR.BackProyect.service.IPersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,4 +40,36 @@ public class PersonaController {
         perso.editarPersona(per);
     }
     
+    //Agregando a persona los diferentes items
+    
+     @PostMapping("/new/educacion/{id}")
+     public void crearEducacion(@RequestBody Educacion aux,@PathVariable Persona id){
+        perso.agregarEducacion(aux, id);
+    }
+     
+     @PostMapping("/new/experiencia/{id}")
+     public void crearExperiencia(@RequestBody Experiencia aux,@PathVariable Persona id){
+        perso.agregarExperiencia(aux, id);
+    }
+     
+     @PostMapping("/new/idioma/{id}")
+     public void crearIdioma(@RequestBody Idioma aux,@PathVariable Persona id){
+        perso.agregarIdioma(aux, id);
+    } 
+     
+     @PostMapping("/new/proyecto/{id}")
+     public void crearProyecto(@RequestBody Proyecto aux,@PathVariable Persona id){
+        perso.agregarProyecto(aux, id);
+    }
+    
+     @PostMapping("/new/redes/{id}")
+     public void crearRedes(@RequestBody Redes aux,@PathVariable Persona id){
+        perso.agregarRedes(aux, id);
+    }
+     
+     @PostMapping("/new/tecnologia/{id}")
+     public void crearTecnologia(@RequestBody Tecnologia aux,@PathVariable Persona id){
+        perso.agregarTecnologia(aux, id);
+    }
+     
 }

@@ -13,12 +13,24 @@ public class Proyecto {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     
-    Long id;
-    String nombre;
-    String fechaRealizado;
-    String descripcion;
-    String linkEvidencia;
+    private String nombre;
+    private String fechaRealizado;
+    private String descripcion;
+    private String linkEvidencia;
+
+    public Proyecto() {
+    }
+
+    public Proyecto(Long id, String nombre, String fechaRealizado, String descripcion, String linkEvidencia) {
+        this.id = id;
+        this.nombre = nombre;
+        this.fechaRealizado = fechaRealizado;
+        this.descripcion = descripcion;
+        this.linkEvidencia = linkEvidencia;
+    }
+    
     
     
 }

@@ -13,10 +13,23 @@ public class Idioma {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)    
+    private Long id;
     
-    Long id;
-    String nombre;
-    String nivelEscritura;
-    String nivelHabla;
-    String nativo;
+    private String nombre;
+    private String nivelEscritura;
+    private String nivelHabla;
+    private String nativo;
+
+    public Idioma() {
+    }
+
+    public Idioma(Long id, String nombre, String nivelEscritura, String nivelHabla, String nativo) {
+        this.id = id;
+        this.nombre = nombre;
+        this.nivelEscritura = nivelEscritura;
+        this.nivelHabla = nivelHabla;
+        this.nativo = nativo;
+    }
+    
+    
 }

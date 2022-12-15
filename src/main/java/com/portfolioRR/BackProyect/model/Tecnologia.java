@@ -13,11 +13,23 @@ public class Tecnologia {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     
-    Long id;
-    String nombreTecno;
-    String logoTecno;
-    String gradoDominio;
+    private String nombreTecno;
+    private String logoTecno;
+    private String gradoDominio;
+
+    public Tecnologia() {
+    }
+
+    public Tecnologia(Long id, String nombreTecno, String logoTecno, String gradoDominio) {
+        this.id = id;
+        this.nombreTecno = nombreTecno;
+        this.logoTecno = logoTecno;
+        this.gradoDominio = gradoDominio;
+    }
+    
+    
     
     
 }

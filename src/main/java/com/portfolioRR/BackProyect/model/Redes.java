@@ -12,8 +12,19 @@ import lombok.Setter;
 public class Redes {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     
-    Long id;
-    String link;
-    String logo;
+    private String link;
+    private String logo;
+
+    public Redes() {
+    }
+
+    public Redes(Long id, String link, String logo) {
+        this.id = id;
+        this.link = link;
+        this.logo = logo;
+    }
+    
+    
 }

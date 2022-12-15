@@ -15,11 +15,26 @@ public class Educacion {
 @GeneratedValue(strategy = GenerationType.AUTO)
 Long id;
 
-String nombreCarrera;
-String institucionNombre;
-String logoInstituto;
-String periodo;
-String tituloEducacion;
-String certificado;
+private String nombreCarrera;
+private String institucionNombre;
+private String logoInstituto;
+private String periodo;
+private String tituloEducacion;
+private String certificado;
+
+    public Educacion() {
+    } 
+
+    public Educacion(Long id, String nombreCarrera, String institucionNombre, String logoInstituto, String periodo, String tituloEducacion, String certificado) {
+        this.id = id;
+        this.nombreCarrera = nombreCarrera;
+        this.institucionNombre = institucionNombre;
+        this.logoInstituto = logoInstituto;
+        this.periodo = periodo;
+        this.tituloEducacion = tituloEducacion;
+        this.certificado = certificado;
+    }
+
+
 
 }

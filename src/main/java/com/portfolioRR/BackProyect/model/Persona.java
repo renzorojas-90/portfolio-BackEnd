@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.portfolioRR.BackProyect.model;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,5 +23,64 @@ String fotoPerfil;
 String tituloDesarrollador;
 String usuario;
 String password;
+
+@OneToMany(orphanRemoval = true)
+    List<Educacion> listaEducacion;
+
+@OneToMany
+    List<Experiencia> listaExperiencia;
+
+@OneToMany
+    List<Proyecto> listaProyecto;
+
+@OneToMany
+    List<Redes> listaRedes;
+
+@OneToMany
+    List<Tecnologia> listaTecnologia;
+
+@OneToMany
+    List<Idioma> listaIdioma;
+
+    public Persona() {
+    }
+
     
+
+    public Persona(Long id, String nombre, String apellido, int edad, String fotoPerfil, String tituloDesarrollador, String usuario, String password) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.fotoPerfil = fotoPerfil;
+        this.tituloDesarrollador = tituloDesarrollador;
+        this.usuario = usuario;
+        this.password = password;
+    }
+
+    public void addEducacion(Educacion edu){
+        this.listaEducacion.add(edu);
+    }
+    
+    public void addExperiencia(Experiencia exp){
+        this.listaExperiencia.add(exp);
+    }
+    
+    public void addProyecto(Proyecto pro){
+        this.listaProyecto.add(pro);
+    }
+    
+    public void addRedes(Redes red){
+        this.listaRedes.add(red);
+    }
+    
+    public void addTecnologia(Tecnologia tec){
+        this.listaTecnologia.add(tec);
+    }
+    
+    public void addIdioma(Idioma idi){
+        this.listaIdioma.add(idi);
+    }
+
 }
+
