@@ -35,6 +35,8 @@ private String certificado;
         this.certificado = certificado;
     }
 
-
+    public boolean equals(Educacion edu){
+    return this.getId() == edu.getId();
+            }
 
 }

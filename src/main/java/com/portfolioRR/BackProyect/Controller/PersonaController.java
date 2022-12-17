@@ -74,9 +74,9 @@ public class PersonaController {
     }
      
      
-     @DeleteMapping("/eliminar/educacion/{id}")
-     public void quitarEducacion(@RequestBody Educacion edu,@PathVariable Persona id){
-        perso.quitarEducacion(edu,id);
+     @DeleteMapping("/eliminar/educacion/{idpersona}/{ideducacion}")
+     public void quitarEducacion(@PathVariable Educacion ideducacion,@PathVariable Persona idpersona){
+        perso.quitarEducacion(ideducacion,idpersona);
     }
      
      

@@ -100,12 +100,13 @@ public class PersonaService implements IPersonaService {
     public void quitarEducacion(Educacion edu,Persona per) {
         
         System.out.println("aqui estoy trayendo algo");
-         System.out.println("teyendo per: " + per);
+         System.out.println("teyendo per: " + per.getListaEducacion().size());
          System.out.println("teyendo edu: " + edu);
-        per.removerEducacion(edu,per);
+        per.removerEducacion(edu);
         persoRepo.save(per);
         eduServ.eliminarEducacion(edu);
         
+        System.out.println("teyendo per: " + per.getListaEducacion().size());
     }
 
     

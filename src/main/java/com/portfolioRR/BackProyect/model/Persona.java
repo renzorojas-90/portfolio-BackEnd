@@ -85,10 +85,10 @@ String password;
 
     //removiendo items a los listados
     
-    public void removerEducacion(Educacion edu,Persona per){
+    public void removerEducacion(Educacion edu){
         
-        for(Educacion aux : per.listaEducacion ){
-            if(aux.getId().equals(edu.getId())){
+        for(Educacion aux : this.listaEducacion ){
+            if(aux.equals(edu)){
                 this.listaEducacion.remove(edu);
                 break;
             }
