@@ -79,6 +79,10 @@ public class PersonaController {
         perso.quitarEducacion(ideducacion,idpersona);
     }
      
+     @PutMapping("/editar/educacion")
+       public void editarEducacion(@RequestBody Educacion edu){
+        perso.editarEducacion(edu);
+    }
      
-     
+
 }

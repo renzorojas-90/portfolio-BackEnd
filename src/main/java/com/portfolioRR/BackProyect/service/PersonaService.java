@@ -109,6 +109,9 @@ public class PersonaService implements IPersonaService {
         System.out.println("teyendo per: " + per.getListaEducacion().size());
     }
 
-    
+    public void editarEducacion(Educacion edu){ 
+        eduServ.editarEducacion(edu);
+        
+    }
     
 }

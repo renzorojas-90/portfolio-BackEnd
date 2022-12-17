@@ -32,8 +32,5 @@ public class EducacionController {
     }
     
     
-    @PutMapping("editar/educacion")
-    public void editarEducacion(@RequestBody Educacion edu){
-        eduServ.editarEducacion(edu);
-    }
+    
 }
