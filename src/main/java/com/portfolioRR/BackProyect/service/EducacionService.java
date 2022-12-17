@@ -29,9 +29,8 @@ public class EducacionService implements IEducacionService{
     }
 
     @Override
-    public void eliminarEducacion(Long id) {
-        
-        EduRepo.deleteById(id);
+    public void eliminarEducacion(Educacion edu) {
+         EduRepo.delete(edu);
     }
 
     @Override

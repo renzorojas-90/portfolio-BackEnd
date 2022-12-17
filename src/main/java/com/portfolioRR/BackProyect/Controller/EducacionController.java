@@ -31,10 +31,6 @@ public class EducacionController {
         return eduServ.verEducacion();
     }
     
-    @DeleteMapping("/eliminar/educacion/{id}")
-    public void eliminarEducacion(@PathVariable Long id){
-        eduServ.eliminarEducacion(id);
-    }
     
     @PutMapping("editar/educacion")
     public void editarEducacion(@RequestBody Educacion edu){

@@ -9,6 +9,7 @@ import com.portfolioRR.BackProyect.model.Redes;
 import com.portfolioRR.BackProyect.model.Tecnologia;
 import com.portfolioRR.BackProyect.service.IPersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -71,5 +72,13 @@ public class PersonaController {
      public void crearTecnologia(@RequestBody Tecnologia aux,@PathVariable Persona id){
         perso.agregarTecnologia(aux, id);
     }
+     
+     
+     @DeleteMapping("/eliminar/educacion/{id}")
+     public void quitarEducacion(@RequestBody Educacion edu,@PathVariable Persona id){
+        perso.quitarEducacion(edu,id);
+    }
+     
+     
      
 }

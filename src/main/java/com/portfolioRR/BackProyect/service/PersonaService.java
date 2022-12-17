@@ -95,7 +95,19 @@ public class PersonaService implements IPersonaService {
         per.addTecnologia(tec_id);
         persoRepo.save(per);
     }
-    
+
+    @Override
+    public void quitarEducacion(Educacion edu,Persona per) {
+        
+        System.out.println("aqui estoy trayendo algo");
+         System.out.println("teyendo per: " + per);
+         System.out.println("teyendo edu: " + edu);
+        per.removerEducacion(edu,per);
+        persoRepo.save(per);
+        eduServ.eliminarEducacion(edu);
+        
+    }
+
     
     
 }

@@ -22,4 +22,6 @@ public interface IPersonaService {
     public void agregarProyecto(Proyecto pro,Persona per);
     public void agregarRedes(Redes red,Persona per);
     public void agregarTecnologia(Tecnologia tec,Persona per);
+    
+    public void quitarEducacion(Educacion edu,Persona per);
 }

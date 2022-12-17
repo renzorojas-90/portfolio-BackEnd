@@ -24,7 +24,7 @@ String tituloDesarrollador;
 String usuario;
 String password;
 
-@OneToMany(orphanRemoval = true)
+@OneToMany
     List<Educacion> listaEducacion;
 
 @OneToMany
@@ -58,6 +58,7 @@ String password;
         this.password = password;
     }
 
+        //añadiendo items a la lista
     public void addEducacion(Educacion edu){
         this.listaEducacion.add(edu);
     }
@@ -82,5 +83,18 @@ String password;
         this.listaIdioma.add(idi);
     }
 
+    //removiendo items a los listados
+    
+    public void removerEducacion(Educacion edu,Persona per){
+        
+        for(Educacion aux : per.listaEducacion ){
+            if(aux.getId().equals(edu.getId())){
+                this.listaEducacion.remove(edu);
+                break;
+            }
+        }
+    }
+        
+        
 }
 
