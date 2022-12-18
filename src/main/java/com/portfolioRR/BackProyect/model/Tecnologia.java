@@ -30,6 +30,8 @@ public class Tecnologia {
     }
     
     
-    
+    public boolean equals(Tecnologia tec){
+        return this.getId() == tec.getId();
+    }
     
 }

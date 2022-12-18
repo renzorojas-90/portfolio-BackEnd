@@ -31,6 +31,8 @@ public class Proyecto {
         this.linkEvidencia = linkEvidencia;
     }
     
-    
+    public boolean equals(Proyecto pro){
+        return this.getId() == pro.getId();
+    }
     
 }

@@ -95,8 +95,58 @@ String password;
         }
     }
     
-   
+    public void removerExperiencia(Experiencia var){
         
+        for(Experiencia aux : this.listaExperiencia ){
+            if(aux.equals(var)){
+                this.listaExperiencia.remove(var);
+                break;
+            }
+        }
+    }
+     
+    public void removerIdioma(Idioma var){
+        
+        for(Idioma aux : this.listaIdioma ){
+            if(aux.equals(var)){
+                this.listaIdioma.remove(var);
+                break;
+            }
+        }
+    }
+      
+    public void removerProyecto(Proyecto var){
+        
+        for(Proyecto aux : this.listaProyecto ){
+            if(aux.equals(var)){
+                this.listaProyecto.remove(var);
+                break;
+            }
+        }
+    }
+    
+
+    public void removerRedes(Redes var){
+        
+        for(Redes aux : this.listaRedes ){
+            if(aux.equals(var)){
+                this.listaRedes.remove(var);
+                break;
+            }
+        }
+    }
+    
+    public void removerTecnologia(Tecnologia var){
+        
+        for(Tecnologia aux : this.listaTecnologia ){
+            if(aux.equals(var)){
+                this.listaTecnologia.remove(var);
+                break;
+            }
+        }
+    }
+
+    
         
 }
 

@@ -22,7 +22,29 @@ public interface IPersonaService {
     public void agregarProyecto(Proyecto pro,Persona per);
     public void agregarRedes(Redes red,Persona per);
     public void agregarTecnologia(Tecnologia tec,Persona per);
-    
+    //educacion
     public void quitarEducacion(Educacion edu,Persona per);
     public void editarEducacion(Educacion ideducacion);
+    
+    //Experiencia
+    public void quitarExperiencia(Persona per,Experiencia exp);
+    public void editarExperiencia(Experiencia exp);
+    
+    //Idioma
+    public void quitarIdioma(Persona per,Idioma var);
+    public void editarIdioma(Idioma var);
+    
+    //proyecto
+    public void quitarProyecto(Persona per,Proyecto var);
+    public void editarProyecto(Proyecto var);
+    
+    //Redes
+    public void quitarRedes(Persona per,Redes var);
+    public void editarRedes(Redes var);
+    
+    //Tecnologia
+    public void quitarTecnologia(Persona per,Tecnologia var);
+    public void editarTecnologia(Tecnologia var);
+    
+    
 }

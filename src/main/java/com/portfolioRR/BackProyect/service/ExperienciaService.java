@@ -15,6 +15,16 @@ public class ExperienciaService implements IExperienciaService {
     public Experiencia crearExperiencia(Experiencia exp) {
         return expRepo.save(exp);
     }
+
+    @Override
+    public void eliminarExperiencia(Experiencia exp) {
+      expRepo.delete(exp);
+    }
+
+    @Override
+    public void editarExperiencia(Experiencia exp) {
+        expRepo.save(exp);
+    }
     
     
 }

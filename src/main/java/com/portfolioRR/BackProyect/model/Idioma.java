@@ -31,5 +31,8 @@ public class Idioma {
         this.nativo = nativo;
     }
     
+    public boolean equals(Idioma idi){
+        return this.getId() == idi.getId();
+    }
     
 }

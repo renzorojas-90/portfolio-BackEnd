@@ -15,5 +15,15 @@ public class TecnologiaService implements ITecnologiaService {
     public Tecnologia crearTecnologia(Tecnologia tec) {
         return tecRepo.save(tec);
     }
+
+    @Override
+    public void eliminarTecnologia(Tecnologia tec) {
+        tecRepo.delete(tec);
+    }
+
+    @Override
+    public void editarTecnologia(Tecnologia tec) {
+        tecRepo.save(tec);
+    }
     
 }

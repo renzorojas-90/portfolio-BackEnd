@@ -26,5 +26,7 @@ public class Redes {
         this.logo = logo;
     }
     
-    
+    public boolean equals(Redes red){
+        return this.getId() == red.getId();
+    }
 }

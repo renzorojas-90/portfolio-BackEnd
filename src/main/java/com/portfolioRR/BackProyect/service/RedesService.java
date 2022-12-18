@@ -15,5 +15,15 @@ public class RedesService implements IRedesService {
     public Redes crearRedes(Redes red) {
        return redRepo.save(red);
     }
+
+    @Override
+    public void eliminarRedes(Redes red) {
+        redRepo.delete(red);
+    }
+
+    @Override
+    public void editarRedes(Redes red) {
+        redRepo.save(red);
+    }
     
 }

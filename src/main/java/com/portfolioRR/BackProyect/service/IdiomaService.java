@@ -16,4 +16,15 @@ public class IdiomaService implements IIdiomaService {
       return  idiRepo.save(idi);
     }
     
+    @Override
+    public void eliminarIdioma(Idioma idi){
+        idiRepo.delete(idi);
+    }
+
+    @Override
+    public void editarIdioma(Idioma idi) {
+        idiRepo.save(idi);
+    }
+    
+    
 }

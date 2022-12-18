@@ -14,5 +14,6 @@ import com.portfolioRR.BackProyect.model.Proyecto;
 public interface IProyectoService {
     
     public Proyecto crearProyecto(Proyecto pro);
-    
+    public void eliminarProyecto(Proyecto pro);
+    public void editarProyecto(Proyecto pro);
 }

@@ -96,22 +96,89 @@ public class PersonaService implements IPersonaService {
         persoRepo.save(per);
     }
 
+    //Educacion
     @Override
     public void quitarEducacion(Educacion edu,Persona per) {
         
-        System.out.println("aqui estoy trayendo algo");
-         System.out.println("teyendo per: " + per.getListaEducacion().size());
-         System.out.println("teyendo edu: " + edu);
         per.removerEducacion(edu);
         persoRepo.save(per);
         eduServ.eliminarEducacion(edu);
         
-        System.out.println("teyendo per: " + per.getListaEducacion().size());
     }
-
+    
+    @Override
     public void editarEducacion(Educacion edu){ 
         eduServ.editarEducacion(edu);
         
+    }
+
+    //Experiencia
+    @Override
+    public void quitarExperiencia(Persona per, Experiencia exp) {
+        per.removerExperiencia(exp);
+        persoRepo.save(per);
+        expServ.eliminarExperiencia(exp);
+    }
+
+    @Override
+    public void editarExperiencia(Experiencia exp) {
+        expServ.editarExperiencia(exp);
+    }
+    
+    //Idioma
+
+    @Override
+    public void quitarIdioma(Persona per, Idioma var) {
+       per.removerIdioma(var);
+        persoRepo.save(per);
+        idiServ.eliminarIdioma(var);
+    }
+
+    @Override
+    public void editarIdioma(Idioma var) {
+       idiServ.editarIdioma(var);
+    }
+    
+    
+    //proyecto
+
+    @Override
+    public void quitarProyecto(Persona per, Proyecto var) {
+        per.removerProyecto(var);
+        persoRepo.save(per);
+        proServ.eliminarProyecto(var);
+    }
+
+    @Override
+    public void editarProyecto(Proyecto var) {
+        proServ.editarProyecto(var);
+    }
+    
+    //Redes
+
+    @Override
+    public void quitarRedes(Persona per, Redes var) {
+        per.removerRedes(var);
+        persoRepo.save(per);
+        redServ.eliminarRedes(var);
+    }
+
+    @Override
+    public void editarRedes(Redes var) {
+     redServ.editarRedes(var);
+    }
+
+            //Tecnologia
+    @Override
+    public void quitarTecnologia(Persona per, Tecnologia var) {
+        per.removerTecnologia(var);
+        persoRepo.save(per);
+        tecServ.eliminarTecnologia(var);
+    }
+
+    @Override
+    public void editarTecnologia(Tecnologia var) {
+     tecServ.editarTecnologia(var);
     }
     
 }

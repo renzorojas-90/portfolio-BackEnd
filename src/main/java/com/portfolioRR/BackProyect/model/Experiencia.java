@@ -33,5 +33,7 @@ public class Experiencia {
         this.descripcion = descripcion;
     }
    
-   
+   public boolean equals(Experiencia exp){
+        return this.getId() == exp.getId();
+    }
 }

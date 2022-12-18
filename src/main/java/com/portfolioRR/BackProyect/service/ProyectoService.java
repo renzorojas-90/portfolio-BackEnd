@@ -20,5 +20,15 @@ public class ProyectoService implements IProyectoService {
     public Proyecto crearProyecto(Proyecto pro) {
         return proRepo.save(pro);
     }
+
+    @Override
+    public void eliminarProyecto(Proyecto pro) {
+        proRepo.delete(pro);
+    }
+
+    @Override
+    public void editarProyecto(Proyecto pro) {
+        proRepo.save(pro);
+    }
     
 }

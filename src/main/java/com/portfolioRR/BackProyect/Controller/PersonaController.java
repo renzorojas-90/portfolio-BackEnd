@@ -73,16 +73,75 @@ public class PersonaController {
         perso.agregarTecnologia(aux, id);
     }
      
+     //educacion
      
      @DeleteMapping("/eliminar/educacion/{idpersona}/{ideducacion}")
      public void quitarEducacion(@PathVariable Educacion ideducacion,@PathVariable Persona idpersona){
         perso.quitarEducacion(ideducacion,idpersona);
     }
      
-     @PutMapping("/editar/educacion")
-       public void editarEducacion(@RequestBody Educacion edu){
+    @PutMapping("/editar/educacion")
+    public void editarEducacion(@RequestBody Educacion edu){
         perso.editarEducacion(edu);
     }
      
+       //Experiencia
+       
+    @DeleteMapping("/eliminar/experiencia/{idpersona}/{idexp}")
+    public void quitarExperiencia(@PathVariable Persona idpersona,@PathVariable Experiencia idexp){
+        perso.quitarExperiencia(idpersona,idexp);
+    }
+     
+    @PutMapping("/editar/experiencia")
+    public void editarExperiencia(@RequestBody Experiencia exp){
+        perso.editarExperiencia(exp);
+    }
+       
+       //Idioma
+       
+    @DeleteMapping("/eliminar/idioma/{idpersona}/{id}")
+         public void quitarIdioma(@PathVariable Persona idpersona,@PathVariable Idioma id){
+        perso.quitarIdioma(idpersona,id);
+    }
+     
+     @PutMapping("/editar/idioma")
+       public void editarIdioma(@RequestBody Idioma var){
+        perso.editarIdioma(var);
+    }
+     
+       //Proyecto
+       
+    @DeleteMapping("/eliminar/proyecto/{idpersona}/{id}")
+     public void quitarProyecto(@PathVariable Persona idpersona,@PathVariable Proyecto id){
+        perso.quitarProyecto(idpersona,id);
+    }
+     
+    @PutMapping("/editar/proyecto")
+       public void editarProyecto(@RequestBody Proyecto var){
+        perso.editarProyecto(var);
+    }
+       
+       //redes
+    @DeleteMapping("/eliminar/redes/{idpersona}/{id}")
+    public void quitarRedes(@PathVariable Persona idpersona,@PathVariable Redes id){
+        perso.quitarRedes(idpersona,id);
+    }
+     
+    @PutMapping("/editar/redes")
+    public void editarRedes(@RequestBody Redes var){
+        perso.editarRedes(var);
+    }
+    
+    //Tecnologia
+    
+    @DeleteMapping("/eliminar/tecnologia/{idpersona}/{id}")
+    public void quitarTecnologia(@PathVariable Persona idpersona,@PathVariable Tecnologia id){
+        perso.quitarTecnologia(idpersona,id);
+    }
+     
+    @PutMapping("/editar/tecnologia")
+    public void editarTecnologia(@RequestBody Tecnologia var){
+        perso.editarTecnologia(var);
+    }
 
 }
