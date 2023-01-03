@@ -21,6 +21,7 @@ String apellido;
 int edad;
 String fotoPerfil;
 String tituloDesarrollador;
+String About;
 String usuario;
 String password;
 
@@ -146,7 +147,14 @@ String password;
         }
     }
 
+    public boolean equals(String user){
     
-        
+       return (this.usuario == null ? user == null : this.usuario.equals(user));
+    }
+    
+    public boolean igual(String clave){
+    
+       return (this.password == null ? password == null : this.password.equalsIgnoreCase(clave));
+    }
 }
 

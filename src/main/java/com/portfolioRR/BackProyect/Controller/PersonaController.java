@@ -41,6 +41,13 @@ public class PersonaController {
         perso.editarPersona(per);
     }
     
+    //LOGIN
+    @GetMapping("/login/{usuario}/{password}")
+    @ResponseBody
+    public Persona loguearse(@PathVariable String usuario,@PathVariable String password){
+       return perso.loguearse(usuario,password);
+    }
+    
     //Agregando a persona los diferentes items
     
      @PostMapping("/new/educacion/{id}")
@@ -75,13 +82,17 @@ public class PersonaController {
      
      //educacion
      
-     @DeleteMapping("/eliminar/educacion/{idpersona}/{ideducacion}")
+     @DeleteMapping("/eliminar/educacion/{ideducacion}/{idpersona}")
      public void quitarEducacion(@PathVariable Educacion ideducacion,@PathVariable Persona idpersona){
         perso.quitarEducacion(ideducacion,idpersona);
     }
      
     @PutMapping("/editar/educacion")
     public void editarEducacion(@RequestBody Educacion edu){
+        
+        System.out.println("llega aqui:" + edu);
+        System.out.println(":"+edu.getNombreCarrera());
+        System.out.println(":"+edu.getId());
         perso.editarEducacion(edu);
     }
      

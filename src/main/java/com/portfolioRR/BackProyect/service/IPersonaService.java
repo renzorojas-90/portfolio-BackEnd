@@ -15,6 +15,9 @@ public interface IPersonaService {
     public Persona verPersona(Long id);
     public void editarPersona(Persona per);
     
+    //Login
+    public Persona loguearse(String usuario, String password);
+
     //Agregando items 
     public void agregarEducacion(Educacion edu,Persona per);
     public void agregarExperiencia(Experiencia exp,Persona per);

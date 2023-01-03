@@ -37,4 +37,9 @@ public class EducacionService implements IEducacionService{
     public void editarEducacion(Educacion edu) {
         EduRepo.save(edu);
     }
+
+    @Override
+    public Educacion verUnaEducacion(long id) {
+        return EduRepo.findById(id).orElse(null);
+    }
 }

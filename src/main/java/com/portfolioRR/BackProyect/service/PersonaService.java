@@ -9,6 +9,7 @@ import com.portfolioRR.BackProyect.model.Proyecto;
 import com.portfolioRR.BackProyect.model.Redes;
 import com.portfolioRR.BackProyect.model.Tecnologia;
 import com.portfolioRR.BackProyect.repository.PersonaRepository;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -107,7 +108,28 @@ public class PersonaService implements IPersonaService {
     }
     
     @Override
-    public void editarEducacion(Educacion edu){ 
+    public void editarEducacion(Educacion edu){
+        
+        /*
+        Educacion consulta_edu = eduServ.verUnaEducacion(edu.getId());
+        System.out.println("consulta:" + consulta_edu);
+            
+        List<Educacion> aux = per.getListaEducacion();
+        
+        for(Educacion lista : aux){
+            if(lista.getId() == edu.getId()){
+            
+                
+            }
+            
+        }
+        
+        if (edu.getId()==per.getListaEducacion().get(0))
+        List<Educacion> aux = per.getListaEducacion();
+        
+        per.setListaEducacion(aux);
+        persoRepo.save(per);
+        */
         eduServ.editarEducacion(edu);
         
     }
@@ -179,6 +201,28 @@ public class PersonaService implements IPersonaService {
     @Override
     public void editarTecnologia(Tecnologia var) {
      tecServ.editarTecnologia(var);
+    }
+
+        //LOGIN
+    @Override
+    public Persona loguearse(String usuario, String password) {
+        List<Persona> personas = persoRepo.findAll();
+        Persona aux = new Persona();
+        
+        System.out.println("usuario general: "+ usuario);
+        System.out.println("password: "+ password);
+        
+        for(Persona per : personas){
+                      
+                if(per.equals(usuario) && per.igual(password)){
+                
+                    aux=per;
+                    System.out.println("son iguales");
+                }
+             
+        }   
+                
+       return aux;         
     }
     
 }

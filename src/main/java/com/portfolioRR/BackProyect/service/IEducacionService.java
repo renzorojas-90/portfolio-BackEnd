@@ -9,4 +9,5 @@ public interface IEducacionService {
     public List <Educacion> verEducacion();
     public void eliminarEducacion(Educacion edu);
     public void editarEducacion(Educacion edu);
+    public Educacion verUnaEducacion(long id);
 }
