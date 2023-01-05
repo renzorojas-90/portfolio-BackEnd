@@ -175,6 +175,7 @@ public class PersonaService implements IPersonaService {
     public void editarProyecto(Proyecto var) {
         proServ.editarProyecto(var);
     }
+  
     
     //Redes
 
@@ -224,5 +225,29 @@ public class PersonaService implements IPersonaService {
                 
        return aux;         
     }
+    
+    @Override
+     public boolean loguearse2(String usuario, String password) {
+        List<Persona> personas = persoRepo.findAll();
+    
+        boolean var = false;
+        System.out.println("usuario general: "+ usuario);
+        System.out.println("password: "+ password);
+        
+        for(Persona per : personas){
+                      
+                if(per.equals(usuario) && per.igual(password)){
+                
+                    System.out.println("entro");
+                    var=true;
+                    System.out.println("son iguales");
+                }
+             
+        }   
+                
+       return var;         
+    }
+
+    
     
 }

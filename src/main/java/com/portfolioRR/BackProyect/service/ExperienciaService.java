@@ -25,6 +25,11 @@ public class ExperienciaService implements IExperienciaService {
     public void editarExperiencia(Experiencia exp) {
         expRepo.save(exp);
     }
+
+    @Override
+    public Experiencia verExperiencia(Long id) {
+        return expRepo.findById(id).orElse(null);
+    }
     
     
 }

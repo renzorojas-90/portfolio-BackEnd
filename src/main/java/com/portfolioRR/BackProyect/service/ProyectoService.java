@@ -30,5 +30,10 @@ public class ProyectoService implements IProyectoService {
     public void editarProyecto(Proyecto pro) {
         proRepo.save(pro);
     }
+
+    @Override
+    public Proyecto VerProyecto(long id) {
+       return proRepo.findById(id).orElse(null);
+    }
     
 }

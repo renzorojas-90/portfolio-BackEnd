@@ -16,4 +16,5 @@ public interface IProyectoService {
     public Proyecto crearProyecto(Proyecto pro);
     public void eliminarProyecto(Proyecto pro);
     public void editarProyecto(Proyecto pro);
+    public Proyecto VerProyecto(long id);
 }
