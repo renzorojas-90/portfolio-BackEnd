@@ -25,5 +25,10 @@ public class RedesService implements IRedesService {
     public void editarRedes(Redes red) {
         redRepo.save(red);
     }
+
+    @Override
+    public Redes verRedes(long id) {
+       return redRepo.findById(id).orElse(null);
+    }
     
 }

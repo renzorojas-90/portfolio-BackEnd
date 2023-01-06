@@ -10,6 +10,7 @@ import com.portfolioRR.BackProyect.model.Tecnologia;
 import com.portfolioRR.BackProyect.service.IExperienciaService;
 import com.portfolioRR.BackProyect.service.IPersonaService;
 import com.portfolioRR.BackProyect.service.IProyectoService;
+import com.portfolioRR.BackProyect.service.IRedesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,6 +33,8 @@ public class PersonaController {
     
     @Autowired
     private IExperienciaService exp;
+    
+    @Autowired IRedesService red;
     
     
     //persona
@@ -174,6 +177,11 @@ public class PersonaController {
     @PutMapping("/editar/redes")
     public void editarRedes(@RequestBody Redes var){
         perso.editarRedes(var);
+    }
+    
+    @GetMapping("/ver/redes/{id}")
+        public Redes verRedes(@PathVariable long id){
+           return red.verRedes(id);
     }
       
 }
