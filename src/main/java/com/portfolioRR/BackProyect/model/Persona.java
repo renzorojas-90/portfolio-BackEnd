@@ -22,7 +22,7 @@ String apellido;
 int edad;
 String fotoPerfil;
 String tituloDesarrollador;
-String About;
+String about;
 String usuario;
 String password;
 
