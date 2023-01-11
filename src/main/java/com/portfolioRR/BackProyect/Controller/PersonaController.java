@@ -11,6 +11,9 @@ import com.portfolioRR.BackProyect.service.IExperienciaService;
 import com.portfolioRR.BackProyect.service.IPersonaService;
 import com.portfolioRR.BackProyect.service.IProyectoService;
 import com.portfolioRR.BackProyect.service.IRedesService;
+import com.portfolioRR.BackProyect.service.ITecnologiaService;
+import com.portfolioRR.BackProyect.service.SubirImagen;
+import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +21,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 public class PersonaController {
@@ -34,7 +39,13 @@ public class PersonaController {
     @Autowired
     private IExperienciaService exp;
     
-    @Autowired IRedesService red;
+    @Autowired 
+    private IRedesService red;
+    
+    @Autowired
+    private SubirImagen subir;
+    
+    @Autowired ITecnologiaService tec;
     
     
     //persona
@@ -53,6 +64,20 @@ public class PersonaController {
     public void editarPersona(@RequestBody Persona per){
         perso.editarPersona(per);
     }
+    
+   /* @PutMapping("/editar/persona")
+    public void editarPersona(@RequestBody Persona per,@RequestParam("fotoPerfil") MultipartFile file) throws IOException{
+        if(per.getId()==null){
+            String nombreImagen = subir.saveImagen(file);
+            per.setFotoPerfil(nombreImagen);
+        }else{
+           String nombreImagen = subir.saveImagen(file);
+            per.setFotoPerfil(nombreImagen);
+            
+        }
+        perso.editarPersona(per);
+    }*/
+    
     
     //LOGIN
     @GetMapping("/login/{usuario}/{password}")
@@ -144,7 +169,11 @@ public class PersonaController {
     public void editarTecnologia(@RequestBody Tecnologia var){
         perso.editarTecnologia(var);
     }
-     
+    
+    @GetMapping("/ver/tecnologia/{id}")
+        public Tecnologia verTecnologia(@PathVariable long id){
+           return tec.verTecnologia(id);
+    } 
     //idioma
     
      @PostMapping("/new/idioma/{id}")
