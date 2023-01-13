@@ -13,7 +13,7 @@ public class Educacion {
 
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-Long id;
+private Long id;
 
 private String nombreCarrera;
 private String institucionNombre;

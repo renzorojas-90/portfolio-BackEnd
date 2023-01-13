@@ -8,4 +8,5 @@ public interface ITecnologiaService {
     public Tecnologia crearTecnologia(Tecnologia tec);
     public void eliminarTecnologia(Tecnologia tec);
     public void editarTecnologia(Tecnologia tec);
+    public Tecnologia verTecnologia(Long id);
 }
