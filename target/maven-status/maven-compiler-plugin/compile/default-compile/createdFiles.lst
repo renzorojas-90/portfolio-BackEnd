@@ -21,6 +21,7 @@ com\portfolioRR\BackProyect\service\RedesService.class
 com\portfolioRR\BackProyect\repository\EducacionRepository.class
 com\portfolioRR\BackProyect\model\Persona.class
 com\portfolioRR\BackProyect\model\Tecnologia.class
+com\portfolioRR\BackProyect\service\SubirImagen.class
 com\portfolioRR\BackProyect\repository\PersonaRepository.class
 com\portfolioRR\BackProyect\service\ProyectoService.class
 com\portfolioRR\BackProyect\service\IExperienciaService.class
