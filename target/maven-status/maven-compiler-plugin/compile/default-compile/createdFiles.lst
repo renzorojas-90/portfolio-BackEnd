@@ -3,6 +3,7 @@ com\portfolioRR\BackProyect\BackProyectApplication$1.class
 com\portfolioRR\BackProyect\service\IPersonaService.class
 com\portfolioRR\BackProyect\repository\IdiomaRepository.class
 com\portfolioRR\BackProyect\model\Redes.class
+com\portfolioRR\BackProyect\WebConfig.class
 com\portfolioRR\BackProyect\model\Educacion.class
 com\portfolioRR\BackProyect\repository\TecnologiaRepository.class
 com\portfolioRR\BackProyect\Controller\PersonaController.class
