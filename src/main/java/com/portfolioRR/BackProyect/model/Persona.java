@@ -14,17 +14,17 @@ import lombok.Setter;
 public class Persona {
 
 @Id
-@GeneratedValue(strategy = GenerationType.AUTO)
-        
-Long id;
-String nombre;
-String apellido;
-int edad;
-String fotoPerfil;
-String tituloDesarrollador;
-String about;
-String usuario;
-String password;
+@GeneratedValue(strategy = GenerationType.AUTO)     
+private Long   id;
+
+private String nombre;
+private String apellido;
+private int    edad;
+private String fotoPerfil;
+private String tituloDesarrollador;
+private String about;
+private String usuario;
+private String password;
 
 @OneToMany
     List<Educacion> listaEducacion;
