@@ -25,6 +25,10 @@ private String tituloDesarrollador;
 private String about;
 private String usuario;
 private String password;
+private String emailPrincipal;
+private String emailAlternativo;
+private String telefono;
+private String direccion;
 
 @OneToMany
     List<Educacion> listaEducacion;
@@ -47,18 +51,25 @@ private String password;
     public Persona() {
     }
 
-    
-
-    public Persona(Long id, String nombre, String apellido, int edad, String fotoPerfil, String tituloDesarrollador, String usuario, String password) {
+    public Persona(Long id, String nombre, String apellido, int edad, String fotoPerfil, String tituloDesarrollador, String about, String usuario, String password, String emailPrincipal, String emailAlternativo, String telefono, String direccion) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.fotoPerfil = fotoPerfil;
         this.tituloDesarrollador = tituloDesarrollador;
+        this.about = about;
         this.usuario = usuario;
         this.password = password;
+        this.emailPrincipal = emailPrincipal;
+        this.emailAlternativo = emailAlternativo;
+        this.telefono = telefono;
+        this.direccion = direccion;
     }
+
+    
+
+    
 
         //añadiendo items a la lista
     public void addEducacion(Educacion edu){

@@ -19,17 +19,21 @@ public class Proyecto {
     private String fechaRealizado;
     private String descripcion;
     private String linkEvidencia;
+    private String logo;
 
     public Proyecto() {
     }
 
-    public Proyecto(Long id, String nombre, String fechaRealizado, String descripcion, String linkEvidencia) {
+    public Proyecto(Long id, String nombre, String fechaRealizado, String descripcion, String linkEvidencia, String logo) {
         this.id = id;
         this.nombre = nombre;
         this.fechaRealizado = fechaRealizado;
         this.descripcion = descripcion;
         this.linkEvidencia = linkEvidencia;
+        this.logo = logo;
     }
+
+    
     
     public boolean equals(Proyecto pro){
         return this.getId() == pro.getId();
